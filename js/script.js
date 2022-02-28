@@ -15,7 +15,7 @@ $(document).ready(function () {
 	});
 
 	// if admin is active
-	-1 < window.location.href.indexOf("admin") ? brandChanger() : 0
+	-1 < window.location.href.indexOf("admin") ? brandChanger() : brandChanger()
 });
 
 // only admin - brand switcher + input for carousel to set new group of products
@@ -95,8 +95,7 @@ function brandChanger() {
 		let vendorHeight = $(this).find("img").attr('data-height')
 
 		// vendor
-		$("." + vendorActive).removeClass(vendorActive)
-		$("#celek").addClass(vendorName).attr('data-brand', vendorName)
+		$("." + vendorActive).removeClass(vendorActive).addClass(vendorName).attr('data-brand', vendorName)
 
 		// logo
 		$("#celek .ppHeader .ppHeader__logoWrapper--imageWrapper img").attr({
@@ -105,9 +104,4 @@ function brandChanger() {
 			"height": vendorHeight
 		})
 	});
-
-	// carousel group of products changer
-	function carouselChanger() {
-		$("#celek .carouselChanger").css('display', 'block');
-	} carouselChanger()
 }
