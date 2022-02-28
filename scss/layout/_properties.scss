@@ -1,0 +1,99 @@
+#celek{
+    .ppProperties{
+        margin-top: 60px;
+
+        .par{
+            margin: 40px auto 0;
+            max-width: 80%;
+        }
+
+        .ppSplit{
+            margin-top: 60px;
+            @include flex;
+            justify-content: space-between;
+
+            .ppImage{
+                order: 2;
+                width: calc(50% - 30px);
+
+                &__wrapper{
+                    img{
+                        margin: 0 auto;
+                        max-width: 100%;
+                    }
+                }
+            }
+
+            .ppText{
+                order: 1;
+                width: calc(50% - 30px);
+                text-align: left;
+
+                &__item-wrapper{
+                    margin-top: 6px;
+
+                    &:first-of-type{
+                        margin-top: 0;
+                    }
+                }
+
+                &__items{
+                    margin-top: 24px;
+                }
+
+                &__item{
+                    position: relative;
+                    padding-left: 24px;
+                    text-align: left;
+
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 100%;
+                        background: $black;
+                        left: 0;
+                        top: 6px;
+                    }
+
+                    &:first-of-type{
+                        margin-top: 0;
+                    }
+
+                    .par{ 
+                        margin: 0;
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 650px){
+    .mobile #celek,
+    .mobileapp #celek{
+        .ppProperties .par{
+            max-width: 100%;
+        }
+
+        .ppSplit .ppImage, 
+        .ppSplit .ppText{
+            width: 100%;
+        }
+
+        .ppSplit .ppImage{
+            order: 1;
+        }
+
+        .ppSplit .ppText{
+            margin-top: 32px;
+            order: 2;
+        }
+
+        .ppProperties .ppSplit .ppText__item:before{
+            top: 8px;
+        }
+    }
+}

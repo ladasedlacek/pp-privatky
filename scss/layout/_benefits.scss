@@ -1,0 +1,46 @@
+#celek{
+    .ppBenefits{
+        margin-top: 50px;
+
+        .boxesWrapper{
+            margin-top: 0;
+        }
+
+        &__box{
+            width: calc(50% - 20px);
+            margin: 10px;
+
+            .hdl3{
+                margin-top: 24px;
+            }
+
+            .par--small{
+                margin-top: 24px;
+                margin-bottom: 0;
+            }
+        }
+
+        &__wrapper{
+            img{
+                border-radius: 4px;
+                max-height: 350px;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+// mobile
+@media only screen and (max-width: 600px){
+    .mobile #celek,
+    .mobileapp #celek{
+        .ppBenefits__box{
+            width: 100%;
+            margin-bottom: 30px;
+
+            &:last-of-type{
+                margin-bottom: 0;
+            }
+        }
+    }
+}

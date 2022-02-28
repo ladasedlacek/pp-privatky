@@ -1,0 +1,196 @@
+#celek .vendorSelector{
+    padding: 40px 40px 0;
+
+    &__wrapper{
+        @include flex;
+        align-items: stretch;
+    }
+
+    &__box{
+        width: calc(20% - 10px);
+        margin: 5px;
+        border-radius: 4px;
+        box-shadow: 0 1px 4px rgba($color: $black, $alpha: .15);
+        padding: 10px 16px;
+        @include flex;
+        align-content: center;
+        text-align: center;
+        cursor: pointer;
+        transition: .3s ease-in-out;
+
+        &:hover{
+            box-shadow: 0 2px 6px rgba($color: $black, $alpha: .3);
+        }
+
+        &--logo{
+            max-width: 100%;
+            max-height: 64px;
+            height: 64px;
+        }
+
+        &--name{
+            width: 100%;
+            margin-top: 8px;
+            font-size: 14px;
+            color: $black;
+        }
+    }
+}
+
+// carousel code changer
+#legend #celek .carouselChanger{
+    text-align: center;
+    margin: 40px auto;
+
+    input{
+        margin: 10px auto;
+    }
+    
+    &--button{
+        color: white;
+        display: table;
+        margin: 0 auto;
+        padding: 8px 12px;
+        background: gray;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+}
+
+#popis #celek .carouselChanger,
+#popis #celek .vendorSelector,
+.mobile #celek .carouselChanger,
+.mobile #celek .vendorSelector{
+    display: none !important;
+}
+
+// vendor colors
+/* $colorAlzaPower: #ADBF00;
+$colorLaProromance: #4D4084;
+$colorAlzaErgo: #F39200;
+$colorAlzaGuard: #0094E7;
+$colorAlzaEco: #67B545;
+$colorFerrida: #231F20; */
+
+$alza-vendors: (
+    'alzaPower': #ADBF00,
+    'alzaErgo': #F39200,
+    'alzaGuard': #0094E7,
+    'alzaEco': #67B545,
+    'laProromance': #4D4084,
+    'ferrida': #231F20,
+    'alzaCafe': #1D1D1B,
+    'blackmont': #000000,
+    'eternico': #000000
+);
+
+@each $name, $hex in $alza-vendors {
+    #celek.#{$name}{
+        .ppProperties .ppSplit .ppText__item:before{
+            background: $hex;
+        }
+    }
+}
+
+/* // vendor select
+// alzapower
+#celek.alzaPower{
+    .ppProperties .ppSplit .ppText__item:before,
+    .lp-carousel .lp-container__carousel .swiper-pagination-bullet-active{
+        background: $colorAlzaPower;
+    }
+
+    .lp-carousel .lp-container__carousel .swiper-button-next, 
+    .lp-carousel .lp-container__carousel .swiper-button-prev{
+        background: $colorAlzaPower;
+
+        &:hover{
+            background: darken($color: $colorAlzaPower, $amount: 6%);
+        }
+    }
+}
+
+// laProromance
+#celek.laProromance{
+    .ppProperties .ppSplit .ppText__item:before,
+    .lp-carousel .lp-container__carousel .swiper-pagination-bullet-active{
+        background: $colorLaProromance;
+    }
+
+    .lp-carousel .lp-container__carousel .swiper-button-next, 
+    .lp-carousel .lp-container__carousel .swiper-button-prev{
+        background: $colorLaProromance;
+
+        &:hover{
+            background: darken($color: $colorLaProromance, $amount: 6%);
+        }
+    }
+}
+
+// alzaErgo
+#celek.alzaErgo{
+    .ppProperties .ppSplit .ppText__item:before,
+    .lp-carousel .lp-container__carousel .swiper-pagination-bullet-active{
+        background: $colorAlzaErgo;
+    }
+
+    .lp-carousel .lp-container__carousel .swiper-button-next, 
+    .lp-carousel .lp-container__carousel .swiper-button-prev{
+        background: $colorAlzaErgo;
+
+        &:hover{
+            background: darken($color: $colorAlzaErgo, $amount: 6%);
+        }
+    }
+}
+
+// alzaGuard
+#celek.alzaGuard{
+    .ppProperties .ppSplit .ppText__item:before,
+    .lp-carousel .lp-container__carousel .swiper-pagination-bullet-active{
+        background: $colorAlzaGuard;
+    }
+
+    .lp-carousel .lp-container__carousel .swiper-button-next, 
+    .lp-carousel .lp-container__carousel .swiper-button-prev{
+        background: $colorAlzaGuard;
+
+        &:hover{
+            background: darken($color: $colorAlzaGuard, $amount: 6%);
+        }
+    }
+}
+
+// alzaEco
+#celek.alzaEco{
+    .ppProperties .ppSplit .ppText__item:before,
+    .lp-carousel .lp-container__carousel .swiper-pagination-bullet-active{
+        background: $colorAlzaEco;
+    }
+
+    .lp-carousel .lp-container__carousel .swiper-button-next, 
+    .lp-carousel .lp-container__carousel .swiper-button-prev{
+        background: $colorAlzaEco;
+
+        &:hover{
+            background: darken($color: $colorAlzaEco, $amount: 6%);
+        }
+    }
+}
+
+// ferrida
+#celek.ferrida{
+    .ppProperties .ppSplit .ppText__item:before,
+    .lp-carousel .lp-container__carousel .swiper-pagination-bullet-active{
+        background: $colorFerrida;
+    }
+    
+    .lp-carousel .lp-container__carousel .swiper-button-next, 
+    .lp-carousel .lp-container__carousel .swiper-button-prev{
+        background: $colorFerrida;
+
+        &:hover{
+            background: darken($color: $colorFerrida, $amount: 6%);
+        }
+    }
+} */

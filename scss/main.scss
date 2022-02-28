@@ -1,0 +1,38 @@
+// primary colors
+$primary: #ADBF00;
+$secondary: #27251F;
+$white: #fff ;
+$black: #000;
+
+// files
+@import "reset";
+@import "mixins";
+@import "alza";
+@import "settings";
+@import "features";
+@import "type";
+
+// content
+@import "layout/vendor";
+@import "layout/header";
+@import "layout/usps";
+@import "layout/montage";
+@import "layout/detail";
+@import "layout/benefits";
+@import "layout/video";
+@import "layout/package";
+@import "layout/features";
+@import "layout/properties";
+@import "layout/carousel";
+
+// layout 0
+@import "layout";
+
+// mobile and app
+@import "mobile";
+
+
+
+
+
+

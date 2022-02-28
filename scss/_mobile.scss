@@ -1,0 +1,56 @@
+// mobile + app
+@media only screen and (max-width: 980px){
+    .mobile #celek,
+    .mobileapp #celek{
+        .ppCategory__box{
+            width: calc(50% - 20px);
+        }
+    }
+}
+
+@media only screen and (max-width: 650px){
+    .mobile #celek,
+    .mobileapp #celek{
+        // header
+        .ppHeader__image,
+        .ppHeader__text{
+            width: 100%;
+        }
+
+        .ppHeader__image-wrapper{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            &--image{
+                max-width: 70%;
+            }
+        }
+
+        .ppHeader__text{
+            margin-top: 32px;
+            padding-left: 0;
+        }
+
+        // boxes
+        .ppBoxes{
+            &__box{
+                width: 100%;
+                margin-top: 32px;
+
+                &:first-of-type{
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .mobile #celek,
+    .mobileapp #celek{
+        .ppCategory__box{
+            width: 100%;
+        }
+    }
+}

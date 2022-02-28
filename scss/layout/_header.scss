@@ -1,0 +1,57 @@
+#celek{
+    .ppHeader{
+        &__logoWrapper{
+            padding-top: 70px;
+
+            figure{
+                @include flex;
+            }
+        }
+
+        &__textWrapper{
+            text-align: center;
+            margin-top: 60px;
+
+            .hdl2{
+                color: $black;
+                margin: 0 auto;
+                max-width: 80%;
+                padding: 0;
+            }
+
+            .par{
+                font-size: 18px;
+                line-height: 27px;
+                color: #535252;
+                margin: 30px auto 0;
+                max-width: 80%;
+            }
+        }
+
+        &__productWrapper{
+            margin: 30px auto 0;
+
+            &--imageWrapper{
+                @include flex;
+                margin: 0 auto;
+                
+                img{
+                    max-height: 400px;
+                    height: auto;
+                    width: auto;
+                }
+            }
+        }
+    }
+}
+
+// mobile
+@media only screen and (max-width: 650px){
+    .mobile #celek,
+    .mobileapp #celek{
+        .ppHeader__textWrapper .hdl2,
+        .ppHeader__textWrapper .par{
+            max-width: 100%;
+        }
+    }
+}

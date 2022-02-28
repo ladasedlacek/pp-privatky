@@ -1,0 +1,13 @@
+#celek{
+    .ppPackage{
+        margin-top: 60px;
+
+        &__wrapper{
+            img{
+                max-height: 400px;
+                margin: 0 auto;
+                max-width: 100%;
+            }
+        }
+    }
+}

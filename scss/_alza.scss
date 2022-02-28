@@ -1,0 +1,119 @@
+// alza colors
+$alza: #00275b;
+$sport: #a1c900;
+$media: #0094e7;
+$hracky: #fd7528;
+$maxi: #e9242e;
+$beauty: #c7b276;
+$hobby: #764510;
+$moto: #262F38;
+$pet: #cb8f10;
+$gray: #F4F5F5;
+
+$alza-colors: (
+    'alza': #00275b,
+    'sport': #a1c900,
+    'media': #0094e7,
+    'hracky': #fd7528,
+    'maxi': #e9242e,
+    'beauty': #c7b276,
+    'hobby': #764510,
+    'moto': #262F38,
+    'pet': #cb8f10,
+    'white': #fff,
+    'gray': #F4F5F5,
+    'ergo': #f18a00
+);
+
+// alza gradients
+@each $name, $hex in $alza-colors {
+    #landingpage .grad-#{$name}{
+        background: linear-gradient(to right, $hex, lighten($hex, 12%));
+    }
+}
+
+// alza buttons
+@mixin height($value) {
+    line-height: $value + px;
+    height: $value + px;
+}
+
+#celek .btn{
+    display: inline-block;
+    padding: 0 24px;
+    border-radius: 4px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 1px 4px rgba($color: $black, $alpha: .15);
+    @include height(40);
+    transition: .3s ease-in-out;
+
+    .btn-text{
+        line-height: 40px;
+    }
+
+    &--small{
+        @include height(30);
+
+        .btn-text{
+            line-height: 30px;
+        }
+    }
+
+    &--big{
+        @include height(60);
+        padding: 0 32px;
+
+        .btn-text{
+            line-height: 60px;
+        }
+    }
+
+    &--dis{
+        opacity: .5;
+        cursor: auto;
+        box-shadow: none;
+    }
+
+    // button text
+    .btn-text{
+        @include roboto;
+        font-size: 14px;
+        font-weight: 500;
+        color: $white;
+        position: relative;
+        z-index: 3;
+        transition: .3s ease-in-out;
+        letter-spacing: .5px;
+    }
+}
+
+#celek .btn--big .btn-text{
+    font-size: 20px;
+}
+
+// extend all buttons class for each color
+@each $name, $hex in $alza-colors {
+    #celek .btn-#{$name}{
+        @extend .btn;
+        background: $hex;
+
+        &:hover{
+            background: darken($color: $hex, $amount: 6%);
+            box-shadow: 0 1px 8px rgba($color: $black, $alpha: .3);
+        }
+
+        &:active{
+            background: darken($color: $hex, $amount: 12%);
+            box-shadow: none;
+        }
+    }
+}
+
+//color change for white and gray version of button
+#celek .btn-white .btn-text,
+#celek .btn-gray .btn-text{
+    color: #535252;
+}
