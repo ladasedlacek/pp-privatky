@@ -4,19 +4,39 @@ $(document).ready(function () {
 });
 
 function addCarousel() {
-    let errorText, okText, button, input, text
-    errorText = 'Špatný kód. Musí obsahovat pouze číslice a mít aspoň 5 znaků!'
-    okText = 'Skupina produktů úspěšně nastavena.'
-    text = $('#celek .ppAddCarousel .par--small')
+    let errorText, validText, button, input, paragraph, text, carouselId
+    text = 'Vložte ID skupiny produktů'
+    errorText = 'Špatné ID. Musí obsahovat pouze číslice a mít alespoň 5 znaků!'
+    validText = 'Skupina produktů úspěšně nastavena.'
+    paragraph = $('#celek .ppAddCarousel .par--small')
     button = $('#celek .ppAddCarousel .btn')
-    input = $('#celek .ppAddCarousel .productsGroup').val()
+    carouselId = $('#celek')
 
     // on click
     $(button).on("click", function () {
-        if (input.length >= 5) {
-            text.text(okText)
-        } else {
-            text.text(errorText)
+        // input target + all letters
+        input = $('#celek .ppAddCarousel .productsGroup')
+        let letters = /[a-zA-Z]/g
+
+        // check if string contain letters
+        letters.test(input.val()) ? inputFail() : inputValid() 
+
+        // input is not valid
+        function inputFail() {
+            paragraph.text(errorText).css({'color' : 'red'})
+            input.val('')
+            carouselId.attr('data-carousel', 'none')
+        } 
+
+        // input is valid
+        function inputValid() {
+            let inputLength = input.val().length
+            inputLength >= 5 ? (paragraph.text(validText).css({'color' : 'green'}), carouselId.attr('data-carousel', input.val()), input.val('')) : inputFail()
         }
+
+        // return default text
+        function returnText() {
+            paragraph.text(text).css({'color' : '#535252'})
+        } setInterval(returnText, 5500) 
 	});
 }
