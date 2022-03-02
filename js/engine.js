@@ -1,9 +1,9 @@
 $(document).ready(function () {
 	// if admin is active
-	-1 < window.location.href.indexOf("admin") ? addCarousel() : addCarousel()
+	-1 < window.location.href.indexOf("admin") ? carouselAdmin() : carouselAdmin()
 });
 
-function addCarousel() {
+function carouselAdmin() {
     let errorText, validText, button, input, paragraph, text, carouselId
     text = 'Vložte ID skupiny produktů'
     errorText = 'Špatné ID. Musí obsahovat pouze číslice a mít alespoň 5 znaků!'
@@ -32,11 +32,6 @@ function addCarousel() {
         function inputValid() {
             let inputLength = input.val().length
             inputLength >= 5 ? (paragraph.text(validText).css({'color' : 'green'}), carouselId.attr('data-carousel', input.val()), input.val('')) : inputFail()
-        }
-
-        // return default text
-        function returnText() {
-            paragraph.text(text).css({'color' : '#535252'})
-        } setInterval(returnText, 5500) 
+        } 
 	});
 }
