@@ -13,7 +13,6 @@ $black: #000;
 @import "type";
 
 // content
-@import "layout/vendor";
 @import "layout/header";
 @import "layout/usps";
 @import "layout/montage";
@@ -23,9 +22,14 @@ $black: #000;
 @import "layout/package";
 @import "layout/features";
 @import "layout/properties";
-@import "layout/carouselEngine";
-@import "layout/carousel";
-@import "layout/addons";
+
+
+// addons
+@import "addons/brand";
+@import "addons/carouselEngine";
+@import "addons/carousel";
+@import "addons/swiper";
+@import "addons/addons";
 
 // layout 0
 @import "layout";
