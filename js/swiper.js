@@ -42,13 +42,10 @@ function runCarousel() {
 						spaceBetween: 20,
 						slidesPerGroup: ($("#body2.layout-1").length) ? 6 : 5
 					}
-				},
-				on: {
-					init: function init() {
-						let carouselTarget = $("#celek .lp-carousel .lp-container__carousel .swiper-container");
-						carouselTarget.swiper.update();
-					}
 				}
+				/* on: {
+					*****
+				} */
 			});
 		}
 	}

@@ -22,7 +22,7 @@
             max-width: 100%;
             position: relative;
 
-            // CAROUSEL
+            // carousel
             .swiper-container{
                 height: auto;
                 padding: 24px 10px;
@@ -70,28 +70,6 @@
                     margin-bottom: 12px;
                 }
 
-                .swiper-product-nameext{
-                    padding: 0 18px;
-                    font-size: 14px;
-                    line-height: 1.3;
-                    color: #898989;
-                    position: relative;
-                    height: 65px;
-                    margin-top: 8px;
-                    overflow: hidden;
-                    @include roboto();
-
-                    &::after{
-                        content: "";
-                        position: absolute;
-                        left: 0;
-                        bottom: 0;
-                        width: 100%;
-                        height: 65px;
-                        background-image: linear-gradient(180deg,hsla(0,0%,100%,0) 0,#fff);
-                    }
-                }
-
                 .swiper-product-cprice{
                     font-size: 14px;
                     font-weight: 400;
@@ -116,21 +94,6 @@
                     display: inline-block;
                     @include roboto();
                     padding: 0 1px;
-                }
-
-                .swiper-product-button{
-                    display: block;
-                    margin: 0 auto 16px;
-                    background-color: #F5F5F5;
-                    border-radius: 4px;
-                    color: $black;
-                    font-size: 14px;
-                    font-weight: 600;
-                    @include roboto();
-                    width: 120px;
-                    height: 32px;
-                    line-height: 32px;
-                    box-shadow: 0 1px 4px rgba($color: $black, $alpha: .15);
                 }
             }
 

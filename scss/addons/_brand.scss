@@ -56,5 +56,18 @@ $alza-brands: (
         .ppProperties .ppSplit .ppText__item:before{
             background: $hex;
         }
+
+        .swiper-pagination-bullet-active{
+            background: $hex;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next{
+            background: $hex;
+
+            &:hover{
+                background: darken($color: $hex, $amount: 6%);
+            }
+        }
     }
 }
