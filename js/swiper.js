@@ -42,16 +42,20 @@ function runCarousel() {
 						spaceBetween: 20,
 						slidesPerGroup: ($("#body2.layout-1").length) ? 6 : 5
 					}
+				},
+				on: {
+					init: function init() {
+						let swiperSlides = $('#celek .swiper-slide').length
+						swiperSlides < 1 ? $('#celek .ppCarousel').remove() : 0
+					}
 				}
-				/* on: {
-					*****
-				} */
 			});
 		}
 	}
 
 	// 2)  Byla načtena data a vložena do elementů produktů - pokud má swiper loop, musí se duplikované produkty znovu vytvořit
 	function produktyNacteny(event) {
+		console.log(produktyNacteny(event))
 		if (event && event.type === "productsLoaded") {
 
 			if (typeof event.target.swiper !== "undefined" && event.target.swiper.params.loop) {
@@ -59,7 +63,6 @@ function runCarousel() {
 				event.target.swiper.loopCreate();
 				event.target.swiper.update();
 			}
-
 		}
 	}
 

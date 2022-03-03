@@ -3,6 +3,7 @@
         padding: 40px;
         background-color: #f8f8f8;
         text-align: center;
+        display: none;
 
         .hdl3{
             font-weight: 700;
@@ -10,4 +11,8 @@
             margin-bottom: 32px;
         }
     }
+}
+
+#legend #celek .ppAddons{
+    display: block;
 }
