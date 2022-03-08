@@ -1,5 +1,5 @@
 function brandSelect() {
-	$("#celek .brandSelector").css({'display' : 'block'}).addClass('funguje');
+	$("#celek .brandSelector").css({'display' : 'block'});
 
 	var brandsList = {
 		alzaPower: {
