@@ -1,6 +1,6 @@
 function brandSelect() {
-	$("#celek .brandSelector").css({'display' : 'block'});
-
+	console.log('Brand selector is working.')
+	
 	var brandsList = {
 		alzaPower: {
 			"logo" : "https://cdn.alza.cz/Foto/LegendFoto/EN/Files/sablona/alza-privatky/img/logos/alzapower.svg",

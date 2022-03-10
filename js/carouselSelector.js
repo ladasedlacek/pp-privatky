@@ -1,5 +1,5 @@
 // settings for admin
-function carouselAdmin() {
+function carouselSelector() {
     let errorText, validText, button, par, text, carouselId, removeText
     text = 'Vložte ID skupiny produktů'
     errorText = 'Špatné ID. Musí obsahovat pouze číslice a mít alespoň 5 znaků!'
@@ -43,4 +43,3 @@ function carouselAdmin() {
         } 
     });
 } 
-

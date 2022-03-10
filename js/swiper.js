@@ -27,16 +27,19 @@ function runCarousel() {
 						spaceBetween: 20,
 						slidesPerGroup: 1
 					},
+
 					460: {
-					slidesPerView: 2,
-					spaceBetween: 10,
-					slidesPerGroup: 2
+						slidesPerView: 2,
+						spaceBetween: 10,
+						slidesPerGroup: 2
 					},
+
 					700: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-					slidesPerGroup: 3
+						slidesPerView: 3,
+						spaceBetween: 20,
+						slidesPerGroup: 3
 					},
+
 					980: {
 						slidesPerView: ($("#body2.layout-1").length) ? 6 : 5,
 						spaceBetween: 20,
@@ -45,8 +48,7 @@ function runCarousel() {
 				},
 				on: {
 					init: function init() {
-						let swiperSlides = $('#celek .swiper-slide').length
-						swiperSlides < 1 ? $('#celek .ppCarousel').remove() : 0
+						
 					}
 				}
 			});

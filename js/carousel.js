@@ -35,6 +35,15 @@ function insertCarousel() {
         runCarousel()
     } 
 
+    // if carousel has 2 or less slides - remove carousel
+    let checkSlides = setInterval(function() {
+        if ($('#celek .lp-products--loaded').length) {
+           clearInterval(checkSlides);
+           let slides = $('#celek .ppCarousel .lp-container__carousel .swiper-slide')
+           slides.length <= 2 ? carouselIsNotValid() : 0
+        }
+    }, 100);
+
     // carousel is not valid
     function carouselIsNotValid() {
         $('#celek .ppCarousel').remove()

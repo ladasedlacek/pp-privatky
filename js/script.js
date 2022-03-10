@@ -15,11 +15,15 @@ $(document).ready(function () {
 	});
 
 	// run all functions
-	-1 < window.location.href.indexOf("admin") || -1 < window.location.href.indexOf("127") ? (carouselAdmin(), brandSelect()) : (insertCarousel(), removeAddons())
+	-1 < window.location.href.indexOf("admin") || -1 < window.location.href.indexOf("127") ? (carouselSelector(), brandSelect(), addAddons()) : (insertCarousel(), removeAddons())
 
 	// remove html addons content from the web
 	function removeAddons() {
 		$('#celek .ppAddons').remove()
 	}
-});
 
+	// show addons 
+	function addAddons() {
+		$("#celek .ppAddons").css({'display' : 'block'});
+	}
+});
