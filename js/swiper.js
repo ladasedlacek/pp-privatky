@@ -57,9 +57,7 @@ function runCarousel() {
 
 	// 2)  Byla načtena data a vložena do elementů produktů - pokud má swiper loop, musí se duplikované produkty znovu vytvořit
 	function produktyNacteny(event) {
-		console.log(produktyNacteny(event))
 		if (event && event.type === "productsLoaded") {
-
 			if (typeof event.target.swiper !== "undefined" && event.target.swiper.params.loop) {
 				event.target.swiper.loopDestroy();
 				event.target.swiper.loopCreate();

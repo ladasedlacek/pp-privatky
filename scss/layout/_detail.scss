@@ -2,28 +2,21 @@
     .ppDetail{
         margin-top: 60px;
 
-        .ppSplit{
-            margin-top: 60px;
-            @include flex;
-            justify-content: space-between;
-
-            &:first-of-type{
-                margin-top: 0;
-            }
-
-            &:nth-of-type(odd){
+        &:nth-of-type(odd){
+            .ppSplit{
                 .ppImage{
                     order: 2;
-
-                    .ppImage__wrapper{
-                        justify-content: flex-end;
-                    }
                 }
-
+    
                 .ppText{
                     order: 1;
                 }
             }
+        }
+
+        .ppSplit{
+            @include flex;
+            justify-content: space-between;
 
             .ppImage{
                 width: calc(50% - 30px);
