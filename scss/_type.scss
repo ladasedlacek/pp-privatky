@@ -1,3 +1,9 @@
+// size mixin
+@function size($value) {
+    $style: ($value / 16) + rem;	
+    @return $style;
+}
+
 #celek{
     .lp-container{
         .hdl2,
@@ -33,67 +39,74 @@
         color: $secondary;
     }
     
+    // body text
+    p,
+    span,
+    a,
+    li,
+    .perex,
     .par,
-    .par--small,
-    .par--min,
-    .par--link,
-    .subHdl{
+    .par-sm,
+    .listItems{
         display: block;
         font-weight: 400;
         @include roboto;
-        font-size: 14px;
-        line-height: 1.5;
-    }
-    
-    .par--small,
-    .par--small--link{
-        font-size: 14px;
-        line-height: 22px;
-    }
-    
-    .par--min,
-    .par--min--link{
-        font-size: 12px;
-        line-height: 16px;
-    }
-    
-    .par,
-    .par--small,
-    .par--min{
+        color: #535252;
+        margin: 0;
+
         &--link{
+            display: inline-block;
+            font-weight: 400;
+            @include roboto;
             text-decoration: underline;
             color: $media;
             transition: .3s ease-in-out;
-    
+
             &:hover{
                 color: darken($color: $media, $amount: 6%);
             }
         }
     }
-    
-    .subHdl{
-        font-size: 20px;
-        line-height: 34px;
+
+    .perex,
+    .perex--link{
+        font-size: size(16);
+        line-height: size(26);
     }
-    
-    p,
-    span,
-    a,
-    li{
-        font-size: 16px;
-        line-height: 26px;
+
+    .par,
+    .listItems,
+    .par--link,
+    .listItems--link{
+        font-size: size(14);
+        line-height: size(24);
+    }
+
+    .par-sm,
+    .par-sm--link{
+        font-size: size(12);
+        line-height: size(21);
+    }
+
+    .fontNormal{
         font-weight: 400;
-        @include roboto;
-        color: $black;
     }
-    
+
+    .fontMedium{
+        font-weight: 500;
+    }
+
+    .sectionTop{
+        max-width: 85%;
+        margin: 24px auto 0;
+    }
+
     strong{
         font-weight: 700;
     }
     
-    // links
     a{
-        text-decoration: none
+        text-decoration: none;
     }
 }
 
