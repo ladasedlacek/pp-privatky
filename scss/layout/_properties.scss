@@ -2,11 +2,6 @@
     .ppProperties{
         margin-top: 60px;
 
-        .par{
-            margin: 40px auto 0;
-            max-width: 80%;
-        }
-
         .ppSplit{
             margin-top: 60px;
             @include flex;
@@ -61,7 +56,8 @@
                         margin-top: 0;
                     }
 
-                    .par{ 
+                    .par,
+                    .perex{ 
                         margin: 0;
                         max-width: 100%;
                     }
